@@ -3,9 +3,9 @@ body {
     font-weight: 400;
     font-size: 18px;
     color: black;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px;
 }
 
 .bloc {
@@ -17,17 +17,17 @@ body {
             background-color: hsl(207, 33%, 95%);
             z-index: 0;
             width: 100%;
-            height: 25vh;
+            height: 36vh;
             padding: 0;
             margin: 0;
             border-bottom-left-radius: 20%;
         }
         img {
-            width: 40%;
+            width: 45%;
             z-index: 1;
             padding: 0;
             position: absolute;
-            margin-top: -120px;
+            margin-top: -180px;
         }
         ul {
             display: flex;
@@ -45,10 +45,16 @@ body {
                 }
             }
         }
+        &__lest--item {
+            color: hsl(230, 11%, 40%);
+        }
     }
     &__left {
+        width: 80%;
+        margin-left: 5%;
         img {
             margin: 40px;
+            margin-left: 0;
         }
         &--para {
             letter-spacing: 4px;
@@ -63,10 +69,27 @@ body {
                 border-radius: 16px;
             }
         }
+        &--para1 {
+            color: hsl(230, 11%, 40%);
+            width: 200px;
+        }
         h1 {
             font-family: 'Barlow', ;
             font-weight: 700;
             font-size: 50px;
         }
+        &--button {
+            color: white;
+            background-color: hsl(0, 100%, 68%);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+        &--text {
+            color: hsl(230, 11%, 40%);
+            margin-left: 20px;
+        }
     }
 }
+
+// ---------------------------------------mixin
