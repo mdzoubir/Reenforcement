@@ -18,29 +18,34 @@
 </head>
 
 <body>
-    <div class="bloc">
+    <div class="bg"></div>
+    <div class="navbar">
+        <img src="./images/logo.svg" alt="" class="navbar__logo">
 
-        <div class="bloc__left">
-            <img src="./images/logo.svg" alt=""><br>
-            <p class="bloc__left--para"><span>NEW</span> MONOGRAPH DASHBORD</p>
-            <h1>POWERFUL INSIGHTS INTO YOUR TEAM</h1>
-            <P class="bloc__left--para1">Project planning and time tracking for agile teams</P>
-            <button class="bloc__left--button">SCHEDUILE A DEMO</button>
-            <span class="bloc__left--text">TO SEE A PREYIEW</span>
+        <input type="checkbox" id="chk">
+        <label for="chk" class="navbar__chek">
+            <i class="fas fa-bars navbar__chek--bergare"></i>
+        </label>
+        <ul class="navbar__menu">
+            <a href="#">PRODUCT</a>
+            <a href="#">FEATURES</a>
+            <a href="#">PRICING</a>
+            <a href="#"><i class="fas fa-circle"></i></a>
+            <a href="#">LOGIN</a>
+            <label for="chk" class="navbar__menu--foi">
+                <i class="fas fa-times"></i>
+            </label>
 
+        </ul>
+    </div>
+    <div class="container">
+        <img src="./images/illustration-devices.svg" alt="" class="container__img">
+        <div class="container__text">
+            <p class="container__text--para"><span>NEW</span>MONOGRAPH DASHBOARD</p>
+            <h1 class="container__text--header">POWERFUL INSIGHTS INTO YOUR TEAM</h1>
+            <p>Project planning and time tracking for agile teams</p>
+            <button>SCHEDULE A DEMO</button><span>TO SEE A PREVIEW</span>
         </div>
-        <div class="bloc__right">
-            <ul bloc__right__lest>
-                <li>Product</li>
-                <li>Features</li>
-                <li>Pricing</li>
-                <li><i class="fas fa-circle"></i></li>
-                <li class="bloc__right__lest bloc__right__lest--item">Login</li>
-            </ul>
-            <div></div>
-            <img src="./images/illustration-devices.svg" alt="">
-        </div>
-
     </div>
 </body>
 

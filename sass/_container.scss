@@ -1,0 +1,19 @@
+.bg {
+    width: 50%;
+    height: 400px;
+    position: absolute;
+    background-color: hsl(207, 33%, 95%);
+    right: 0;
+    border-bottom-left-radius: 80px;
+    z-index: -1;
+    top: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    &__img {
+        width: 100%;
+    }
+}
