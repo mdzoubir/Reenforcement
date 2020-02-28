@@ -1,37 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
     <title>Project tracking intro component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
-  </head>
-  <body>
-    Product Features Pricing Login New Monograph Dashboard Powerful insights
-    into your team Project planning and time tracking for agile teams Schedule a
-    demo to see a live preview
 
-    <footer>
-      <p class="attribution">Coded by <a href="#">Your Name Here</a>.</p>
-    </footer>
-  </body>
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="navbar">
+        <img src="./images/logo.svg" alt="" class="navbar__logo">
+
+        <input type="checkbox" id="chk">
+        <label for="chk" class="navbar__chek">
+            <i class="fas fa-bars navbar__chek--bergare"></i>
+        </label>
+        <ul class="navbar__menu">
+            <a href="#">PRODUCT</a>
+            <a href="#">FEATURES</a>
+            <a href="#">PRICING</a>
+            <a href="#"><i class="fas fa-circle"></i></a>
+            <a href="#">LOGIN</a>
+            <label for="chk" class="navbar__menu--foi">
+                <i class="fas fa-times"></i>
+            </label>
+
+        </ul>
+    </div>
+    <div class="container">
+        <img src="./images/illustration-devices.svg" alt="" class="container__img">
+        <div class="container__text">
+            <p class="container__text--para1"><span>NEW</span>MONOGRAPH DASHBOARD</p>
+            <h1 class="container__text--header">POWERFUL INSIGHTS INTO YOUR TEAM</h1>
+            <p class="container__text--para2">Project planning and time tracking for agile teams</p>
+            <button class="container__text--button">SCHEDULE A DEMO</button><span>TO SEE A PREVIEW</span>
+        </div>
+    </div>
+</body>
+
 </html>

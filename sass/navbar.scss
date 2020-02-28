@@ -1,0 +1,102 @@
+@import'./container';
+@mixin resp($size) {
+    @media (max-width: #{$size}) {
+        @content;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin-right: 0;
+    width: 100%;
+    margin: auto;
+    font-family: 'Barlow', ;
+    font-size: 18px;
+}
+
+#chk {
+    position: absolute;
+    visibility: hidden;
+}
+
+.navbar {
+    margin-left: 10%;
+    height: 100px;
+    padding: 0 20px;
+    &__logo {
+        float: left;
+        margin-top: 30px;
+    }
+    &__menu {
+        float: right;
+        line-height: 100px;
+        &--foi {
+            display: none;
+            font-size: 30px;
+        }
+        a {
+            &:hover {
+                color: hsl(230, 11%, 40%);
+            }
+            color: hsl(230, 29%, 20%);
+            text-decoration: none;
+            padding: 0 25px;
+            @include resp(1130px) {
+                padding: 10px;
+            }
+            @include resp(870px) {
+                padding: 6px;
+            }
+        }
+    }
+    &__chek {
+        display: none;
+        font-size: 30px;
+        &--bergare {
+            float: right;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .navbar {
+        &__chek {
+            display: block;
+        }
+        &__menu {
+            margin: auto;
+            position: fixed;
+            z-index: 10;
+            width: 40%;
+            height: 50vh;
+            background-color: white;
+            top: 30px;
+            left: 60%;
+            right: -100%;
+            text-align: center;
+            padding: 20px 0;
+            line-height: normal;
+            transition: 0.7s;
+            border: solid 2px #000000;
+            &--foi {
+                display: block;
+                position: absolute;
+                top: 0px;
+                right: 40px;
+            }
+            a {
+                display: block;
+                padding: 20px;
+            }
+        }
+    }
+    #chk:checked~.navbar__menu {
+        right: 0%;
+    }
+}
