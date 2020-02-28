@@ -1,24 +1,21 @@
+@import'./container';
+@mixin resp($size) {
+    @media (max-width: #{$size}) {
+        @content;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
-.bg {
-    width: 50%;
-    height: 400px;
-    position: absolute;
-    background-color: hsl(207, 33%, 95%);
-    right: 0;
-    border-bottom-left-radius: 80px;
-    z-index: -1;
-    top: 0;
-}
-
-@import'./container';
 body {
-    width: 80%;
+    margin-right: 0;
+    width: 100%;
     margin: auto;
     font-family: 'Barlow', ;
+    font-size: 18px;
 }
 
 #chk {
@@ -27,6 +24,7 @@ body {
 }
 
 .navbar {
+    margin-left: 10%;
     height: 100px;
     padding: 0 20px;
     &__logo {
@@ -36,13 +34,23 @@ body {
     &__menu {
         float: right;
         line-height: 100px;
+        &--foi {
+            display: none;
+            font-size: 30px;
+        }
         a {
             &:hover {
                 color: hsl(230, 11%, 40%);
             }
             color: hsl(230, 29%, 20%);
             text-decoration: none;
-            padding: 0 10px;
+            padding: 0 25px;
+            @include resp(1130px) {
+                padding: 10px;
+            }
+            @include resp(870px) {
+                padding: 6px;
+            }
         }
     }
     &__chek {
@@ -52,12 +60,6 @@ body {
             float: right;
             margin-top: 30px;
             cursor: pointer;
-        }
-    }
-    &__menu {
-        &--foi {
-            display: none;
-            font-size: 30px;
         }
     }
 }
@@ -70,11 +72,12 @@ body {
         &__menu {
             margin: auto;
             position: fixed;
+            z-index: 10;
             width: 40%;
             height: 50vh;
             background-color: white;
             top: 30px;
-            left: 45%;
+            left: 60%;
             right: -100%;
             text-align: center;
             padding: 20px 0;

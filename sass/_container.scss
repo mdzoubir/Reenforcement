@@ -1,3 +1,9 @@
+@mixin resp($size) {
+    @media (max-width: #{$size}) {
+        @content;
+    }
+}
+
 .bg {
     width: 50%;
     height: 400px;
@@ -10,10 +16,87 @@
 }
 
 .container {
-    display: flex;
-    flex-direction: row-reverse;
+    margin-top: 6%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+    @include resp(900px) {}
+    @include resp(800px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
     &__img {
-        width: 100%;
+        position: relative;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        width: 150%;
+        @include resp(900px) {
+            grid-column: 1/2;
+        }
+        @include resp(900px) {
+            width: 120%;
+            margin-left: 6%;
+        }
+    }
+    &__text {
+        margin-left: 20%;
+        margin-top: 30px;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        line-height: 50px;
+        color: hsl(231, 7%, 65%);
+        @include resp(900px) {
+            margin-top: 10px;
+        }
+        @include resp(800px) {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            margin-left: 10%;
+        }
+        &--para1 {
+            letter-spacing: .2rem;
+            @include resp(390px) {
+                letter-spacing: 0;
+            }
+            span {
+                background-color: #000000;
+                color: white;
+                padding: 0 10px;
+                border-radius: 9px;
+                margin-right: 20px;
+            }
+        }
+        &--header {
+            font-family: 'Barlow', ;
+            font-size: 50px;
+            color: black;
+            @include resp(375px) {
+                font-size: 35px;
+            }
+        }
+        &--para2 {
+            margin-top: 20px;
+            width: 50%;
+            line-height: 120%;
+            color: hsl(231, 7%, 65%);
+            @include resp(375px) {
+                width: 90%;
+            }
+        }
+        &--button {
+            border: none;
+            background-color: hsl(0, 100%, 68%);
+            color: white;
+            padding: 15px;
+            border-radius: 14px;
+            margin-right: 20px;
+            margin-top: 20px;
+            span {
+                color: hsl(231, 7%, 65%);
+            }
+        }
     }
 }
