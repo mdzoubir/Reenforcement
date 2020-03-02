@@ -13,6 +13,9 @@
     border-bottom-left-radius: 80px;
     z-index: -1;
     top: 0;
+    @include resp(448px) {
+        height: 300px;
+    }
 }
 
 .container {
@@ -25,7 +28,10 @@
     @include resp(800px) {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+    @include resp(390px) {
+        margin-top: 0;
     }
     &__img {
         position: relative;
@@ -60,7 +66,7 @@
             margin-left: 10%;
         }
         @include resp(524px) {
-            margin-top: 50px;
+            margin-top: 0px;
         }
         &--para1 {
             letter-spacing: .2rem;
