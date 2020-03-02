@@ -34,6 +34,9 @@ body {
     &__menu {
         float: right;
         line-height: 100px;
+        &--list {
+            color: hsl(207, 33%, 95%);
+        }
         &--foi {
             display: none;
             font-size: 30px;
@@ -41,10 +44,14 @@ body {
         a {
             &:hover {
                 color: hsl(230, 11%, 40%);
+                text-decoration: underline;
             }
             color: hsl(230, 29%, 20%);
             text-decoration: none;
             padding: 0 25px;
+            .fa-circle {
+                color: hsl(231, 7%, 65%);
+            }
             @include resp(1130px) {
                 padding: 10px;
             }
