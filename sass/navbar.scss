@@ -51,6 +51,7 @@ body {
             padding: 0 25px;
             .fa-circle {
                 color: hsl(231, 7%, 65%);
+                font-size: 50%;
             }
             @include resp(1130px) {
                 padding: 10px;
@@ -80,16 +81,16 @@ body {
             margin: auto;
             position: fixed;
             z-index: 10;
-            width: 40%;
+            width: 250px;
             height: 50vh;
             background-color: white;
             top: 30px;
-            left: 60%;
-            right: -100%;
+            left: 10%;
+            right: -190%;
             text-align: center;
             padding: 20px 0;
             line-height: normal;
-            transition: 0.7s;
+            // transition: 0.7s;
             border: solid 2px #000000;
             &--foi {
                 display: block;
